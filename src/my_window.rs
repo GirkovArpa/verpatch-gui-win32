@@ -50,6 +50,9 @@ impl MyWindow {
       let label = gui::Label::new(&wnd, gui::LabelOpts {
         text: format!("{}:", label_texts[i as usize]),
         position: winsafe::POINT::new( 5, 5 + (20 * i) + (5 * i)),
+        // the line below requires winsafe 0.0.3 
+        // size: winsafe::SIZE::new(145, 20),
+        label_style: winsafe::co::SS::RIGHT | winsafe::co::SS::NOTIFY,
         ..Default::default()
       });
 
@@ -73,6 +76,13 @@ impl MyWindow {
       move |_| {
         
         true  
+      }
+    });
+
+    self.wnd.on().wm_init_menu_popup({
+      let myself = self.clone();
+      move |_| {
+        println!("a menu was opened");
       }
     });
   }
