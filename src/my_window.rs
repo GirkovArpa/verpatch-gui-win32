@@ -1,3 +1,4 @@
+#![macro_use]
 use winsafe::gui;
 use winsafe::WinResult;
 
@@ -79,11 +80,24 @@ impl MyWindow {
       }
     });
 
-    self.wnd.on().wm_init_menu_popup({
-      let myself = self.clone();
-      move |_| {
-        println!("a menu was opened");
+    
+    self.wnd.on().wm_command(winsafe::co::CMD::Menu, 1, {
+      move || {
+        println!("Open clicked.")
       }
     });
+
+    self.wnd.on().wm_command(winsafe::co::CMD::Menu, 2, {
+      move || {
+        println!("Save clicked.")
+      }
+    });
+
+    self.wnd.on().wm_command(winsafe::co::CMD::Menu, 3, {
+      move || {
+        println!("About clicked.")
+      }
+    });
+
   }
 }
