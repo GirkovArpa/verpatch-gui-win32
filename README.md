@@ -1,6 +1,6 @@
 # Verpatch GUI Win32
 
-:construction: Under construction :construction:
+:construction: Uses local clone of winsafe as a dependency! :construction:
 
 A graphical user interface for [verpatch](https://www.codeproject.com/Articles/37133/Simple-Version-Resource-Tool-for-Windows), a program that allows modifying an executable's metadata (such as version info and copyright).
 
@@ -14,7 +14,7 @@ Made with [winsafe](https://github.com/rodrigocfd/winsafe).
 
 1. Place [verpatch.exe](https://github.com/egorovsa/node-verpatch/tree/master/bin) inside this folder.
 
-2. Run `cargo run`.
+2. Run `cargo run`, or `cargo build --release` and find the resulting executable in the `target/release` folder.
 
 ## Customization
 
