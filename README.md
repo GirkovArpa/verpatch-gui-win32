@@ -1,7 +1,5 @@
 # Verpatch GUI Win32
 
-:construction: Uses local clone of winsafe as a dependency! :construction:
-
 A graphical user interface for [verpatch](https://www.codeproject.com/Articles/37133/Simple-Version-Resource-Tool-for-Windows), a program that allows modifying an executable's metadata (such as version info and copyright).
 
 Made with [winsafe](https://github.com/rodrigocfd/winsafe).
