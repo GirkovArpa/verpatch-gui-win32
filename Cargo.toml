@@ -10,5 +10,4 @@ codegen-units = 1
 #panic = "abort"
 
 [dependencies]
-# winsafe = "0.0.3"
-winsafe = { path = "../winsafe" }
+winsafe = "0.0.3"
